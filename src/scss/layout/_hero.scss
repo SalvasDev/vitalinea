@@ -1,0 +1,93 @@
+.hero__section {
+    width: min(100%, 375px);
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(10deg, $white__color 10%, #ebacac 10%);
+    // box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.09);
+    padding-bottom: 2rem;
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+
+    .hero__bottle {
+        height: 24.3rem;
+        margin: 10.46rem auto 0 auto;
+        margin-bottom: 0;
+    }
+
+    .hero__info {
+        width: min(95%, 340px);
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .hero__flavors {
+        display: flex;
+        margin: -3.73rem auto 0 auto;
+        column-gap: 1.1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .flavor__btn {
+        border-radius: 11.5px;
+        border: solid 1px rgba(0, 0, 0, .14);
+        width: 8.6rem;
+        height: 2.3rem;
+    }
+
+}
+
+.hero__title {
+    margin: 2rem auto 0 auto;
+    font-weight: 300;
+    font-size: 2rem;
+    color: $purple__color;
+}
+
+.hero__text {
+    margin-top: 1rem;
+    text-align: left;
+    width: 85%;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.comprar__btn {
+    width: 100%;
+    background-color: $purple__color;
+    width: 335px;
+    height: 40px;
+    margin-top: 1rem;
+    color: $white__color;
+    font-size: 1.4rem;
+}
+
+.hero__sellos {
+    display: flex;
+    column-gap: 2.6rem;
+    margin: 3.6rem auto 0 auto;
+    justify-content: center;
+
+
+    .img-sello-avalado {
+        width: 6.2rem;
+    }
+
+    .img-100-kcal {
+        width: 8.6rem;
+    }
+}
+
+.arrow__oval {
+    width: 5rem;
+    height: 5rem;
+    margin: 2.1rem auto 0 auto;
+    background-color: $purple__color;
+    border-radius: 50%;
+
+}
