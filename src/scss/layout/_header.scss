@@ -1,3 +1,7 @@
+.header__ section {
+    width: 100%;
+}
+
 .header__bar {
     width: 100%;
     height: 8rem;
@@ -19,10 +23,37 @@
 
 nav {
     display: none;
+
+    @include desk__1024 {
+        display: flex;
+        column-gap: 2rem;
+        font-size: 1.6rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: $black__gral;
+    }
+
+
 }
 
 .networks {
     display: none;
+
+    a img {
+        width: 2.8rem;
+        height: 2.8rem;
+
+    }
+
+    @include desk__1024 {
+        display: flex;
+        column-gap: 2rem;
+    }
+
+
+
 }
 
 .btn__burg {
@@ -33,6 +64,11 @@ nav {
     padding: 0;
     justify-content: space-between;
     cursor: pointer;
+
+
+    @include desk__1024 {
+        display: none;
+    }
 
     .btn__line {
         width: 100%;
@@ -47,4 +83,11 @@ nav {
         margin-left: auto;
     }
 
+}
+
+.header__group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 6rem;
 }

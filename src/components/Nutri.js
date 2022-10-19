@@ -60,7 +60,7 @@ const nutriArr = [
 
 
 ]
-
+var i = 1;
 
 const Nutri = () => {
     return (
@@ -77,22 +77,23 @@ const Nutri = () => {
                                 Leche descremada pasteurizada y/o reconstituida pasteurizada de vaca. 3.5% preparado de fruta guayaba (acesulfame K y sucralosa (27.2mg/100g)), crema, almidón modificado, maltodextrina y cultivos lácticos.
                             </p>
                         </div>
+
                         <div className="nutri__table">
                             {nutriArr.map(item => {
+                                i = i + 1
                                 var { contenido, cantidad } = item;
                                 return (
-                                    <div className="table__group">
+                                    <div className="table__group" key={i.toString()}>
                                         <p className="table__contenido">{contenido}</p>
                                         <p className="table__cantidad">{cantidad}</p>
                                     </div>
                                 )
 
                             })}
-
-                        </div>
+                        </div> {/* End nutri table */}
                     </div>
 
-                </div>
+                </div>  {/* End nutri container */}
             </section>
         </Fragment>
 
@@ -103,24 +104,3 @@ const Nutri = () => {
 export default Nutri
 
 
-// {
-//     buttons.map((btnInd) => {
-
-//         i = i + 1;
-
-//         var { idd, name } = countries[listRandom[i - 1]] || {}
-
-
-//         return <Btnsolut
-//             key={i.toString()}
-//             nameCountry={name?.common}
-//             idd={(idd?.root + idd?.suffixes).toString()}
-//             btnLetter={btnInd}
-//             iddRight={iddRight}
-//             newButton={'normal'}
-//         />
-
-
-//     })
-
-// } 

@@ -23,7 +23,7 @@ const Hero = () => {
     return (
         <section className="hero__section">
             <div className="hero__container">
-                <img className='hero__bottle' src={bottle__top} srcset={bottle__top2x || bottle__top3x} alt="Botella de fresa principal" />
+                <img className='hero__bottle' src={bottle__top} srcSet={bottle__top2x || bottle__top3x} alt="Botella de fresa principal" />
 
                 {/* Hero info */}
                 <div className="hero__info">
@@ -43,16 +43,15 @@ const Hero = () => {
                     <button className="comprar__btn">Comprar en Walmart</button>
 
                     <div className="hero__sellos">
-                        <img src={sello__avalado} srcset={sello__avalado2x || sello__avalado3x} className="img-sello-avalado" alt='Sello de avalado' />
-                        <img src={kcal} srcset={kcal2x || kcal3x} className="img-100-kcal" alt='Sello cantidad de kilocalorias' />
+                        <img src={sello__avalado} srcSet={sello__avalado2x || sello__avalado3x} className="img-sello-avalado" alt='Sello de avalado' />
+                        <img src={kcal} srcSet={kcal2x || kcal3x} className="img-100-kcal" alt='Sello cantidad de kilocalorias' />
                     </div>
                 </div> {/* End hero info */}
-
-                {/* Arrow */}
-                <button className="arrow__oval">
-                    <img src={flecha} className="flecha" alt="arrow" />
-                </button>
             </div>
+            {/* Arrow */}
+            <button className="arrow__oval">
+                <img src={flecha} className="flecha" alt="arrow" />
+            </button>
         </section>
 
     )

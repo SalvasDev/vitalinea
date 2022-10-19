@@ -20,7 +20,9 @@ const Familia = () => {
             <section className="familia__section">
                 <div className="familia__container">
                     <h2 className="familia__title">LA FAMILIA VITALÍNEA</h2>
+
                     <div className="familia__group">
+
                         <div className="familia__product">
                             <img src={griego} srcSet={griego2x || griego3x} alt="Yogurth griego" />
                             <p className="text__product">Vitalínea Griego</p>
