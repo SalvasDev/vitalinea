@@ -1,5 +1,4 @@
 import React from 'react'
-import gsap from 'gsap'
 
 
 import bottle__top from '../img/products/img-bote-fresa.png'
@@ -29,7 +28,7 @@ const Hero = () => {
 
 
             <div className="hero__container">
-                <img className='hero__bottle' src={bottle__top} srcSet={bottle__top2x || bottle__top3x} alt="Botella de fresa principal" />
+                <img className='hero__bottle' src={bottle__top} alt="Botella de fresa principal" />
 
                 {/* Hero info */}
                 <div className="hero__info">
@@ -64,11 +63,6 @@ const Hero = () => {
 
     )
 }
-
-gsap.from('hero__bottle', {
-    duration: 1,
-    x: 300
-});
 
 
 export default Hero
