@@ -30,6 +30,14 @@ nav {
         font-size: 1.6rem;
     }
 
+    @include desk__1440 {
+        display: flex;
+        column-gap: 6rem;
+        font-size: 1.6rem;
+    }
+
+
+
     a {
         text-decoration: none;
         color: $black__gral;

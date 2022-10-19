@@ -17,7 +17,7 @@ import bebible3x from '../img/products/img-vitalinea-bebible@3x.png'
 const Familia = () => {
     return (
         <Fragment>
-            <section className="familia__section">
+            <section className="familia__section" id='products'>
                 <div className="familia__container">
                     <h2 className="familia__title">LA FAMILIA VITALÍNEA</h2>
 

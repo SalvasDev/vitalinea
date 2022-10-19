@@ -116,3 +116,64 @@
 .table__cantidad {
     justify-self: star;
 }
+
+
+.fresanutri__der {
+    position: absolute;
+    display: block;
+    margin-top: -5rem;
+    margin-left: 70vw;
+    z-index: 100;
+
+    @include mob__490 {
+        margin-left: 80vw;
+    }
+
+    @include tablet__768 {
+        margin-left: 90vw;
+    }
+
+    @include desk__1024 {
+        margin-left: 90vw;
+
+    }
+
+    @include desk__1200 {
+        margin-left: 90vw;
+
+    }
+
+    @include desk__1440 {
+        margin-left: 90vw;
+
+    }
+
+    @include desk__1920 {
+        margin-left: 95vw;
+
+    }
+}
+
+
+
+.fresanutri__izq {
+    position: absolute;
+    margin-top: 20rem;
+    margin-left: -3rem;
+    width: 9rem;
+    z-index: 6;
+}
+
+.fnutrigde__izq {
+    display: none;
+
+    @include tablet__768 {
+        display: block;
+        position: absolute;
+        margin-top: -30rem;
+        margin-left: 0;
+        width: 9rem;
+        z-index: 6;
+    }
+
+}
