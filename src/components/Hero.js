@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import bottle__top from '../img/products/img-bote-fresa.png'
 import { gsap, Bounce } from 'gsap'
+import { ScrollTrigger } from '../animate/ScrollTrigger'
 
 // import bottle__top2x from '../img/products/img-bote-fresa@2x.png'
 // import bottle__top3x from '../img/products/img-bote-fresa@3x.png'
@@ -21,6 +22,7 @@ import fresahero__izq from '../img/strawberries/img-fresas-5.png'
 
 
 const Hero = () => {
+    gsap.registerPlugin(ScrollTrigger);
 
     const timeline = gsap.timeline({ defaults: { duration: 2 } });
 
@@ -28,7 +30,7 @@ const Hero = () => {
         const Bottle = document.querySelectorAll('.hero__bottle');
         const Arrow = document.querySelector('.arrow__oval');
 
-        timeline.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, stagger: 0.1 }).from(Arrow, { opacity: 0, ease: Bounce.easeOut, y: -10, stagger: 0.3 });
+        timeline.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, stagger: 0.1 }).from(Arrow, { opacity: 0, ease: Bounce.easeOut, y: -10, repeat: 1, stagger: 0.1 });
     }, []);
 
 

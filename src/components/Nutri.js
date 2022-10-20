@@ -2,9 +2,14 @@ import React, { Fragment } from 'react'
 import fresanutri__der from '../img/strawberries/img-fresas-6.png'
 import fresanutri__izq from '../img/strawberries/img-fresas-7.png'
 import fnutrigde__izq from '../img/strawberries/img-fresas-4.png'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from '../animate/ScrollTrigger'
 
 
 const Nutri = () => {
+
+    gsap.registerPlugin(ScrollTrigger);
+
 
     const nutriArr = [
         {
@@ -61,8 +66,10 @@ const Nutri = () => {
             contenido: '% VNR *',
             cantidad: '22'
         },
-
     ]
+
+
+    const titleNutri = document.querySelector('.nutri__title')
 
     var i = 1;
     return (
