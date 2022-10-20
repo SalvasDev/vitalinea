@@ -1,9 +1,9 @@
-import React from 'react'
-
-
+import React, { useEffect } from 'react'
 import bottle__top from '../img/products/img-bote-fresa.png'
-import bottle__top2x from '../img/products/img-bote-fresa@2x.png'
-import bottle__top3x from '../img/products/img-bote-fresa@3x.png'
+import { gsap, Bounce } from 'gsap'
+
+// import bottle__top2x from '../img/products/img-bote-fresa@2x.png'
+// import bottle__top3x from '../img/products/img-bote-fresa@3x.png'
 
 import sello__avalado from '../img/logos/img-sello-avalado.png'
 import sello__avalado2x from '../img/logos/img-sello-avalado@2x.png'
@@ -21,11 +21,20 @@ import fresahero__izq from '../img/strawberries/img-fresas-5.png'
 
 
 const Hero = () => {
+
+    // const timeline = gsap.timeline({ defaults: { duration: 2 } });
+
+    useEffect(() => {
+        const Bottle = document.querySelectorAll('.hero__bottle');
+        gsap.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, duration: 2 })
+    }, []);
+
+
     return (
         <section className="hero__section">
             <img className="fresa__arriba" src={fresa__top} alt="fresa arriba" />
             <img className="fresahero__izq" src={fresahero__izq} alt="fresa arriba" />
-
+            <div className="hero__bottle"></div>
 
             <div className="hero__container">
                 <img className='hero__bottle' src={bottle__top} alt="Botella de fresa principal" />
