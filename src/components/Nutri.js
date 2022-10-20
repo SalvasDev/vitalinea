@@ -104,7 +104,7 @@ const Nutri = () => {
             scrollTrigger: {
                 pin: true,
                 trigger: getViewPortWidth() < 768 ? '.header__bar' : '.hero__flavors',
-                markers: true,
+                // markers: true,
                 start: 'top top',
                 end: '1% 1%',
                 duration: 1
