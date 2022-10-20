@@ -22,11 +22,13 @@ import fresahero__izq from '../img/strawberries/img-fresas-5.png'
 
 const Hero = () => {
 
-    // const timeline = gsap.timeline({ defaults: { duration: 2 } });
+    const timeline = gsap.timeline({ defaults: { duration: 2 } });
 
     useEffect(() => {
         const Bottle = document.querySelectorAll('.hero__bottle');
-        gsap.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, duration: 2 })
+        const Arrow = document.querySelector('.arrow__oval');
+
+        timeline.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, stagger: 0.1 }).from(Arrow, { opacity: 0, ease: Bounce.easeOut, y: -10, stagger: 0.3 });
     }, []);
 
 
