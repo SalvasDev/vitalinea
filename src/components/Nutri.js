@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useEffect } from 'react'
 import fresanutri__der from '../img/strawberries/img-fresas-6.png'
 import fresanutri__izq from '../img/strawberries/img-fresas-7.png'
 import fnutrigde__izq from '../img/strawberries/img-fresas-4.png'
-import { gsap } from 'gsap'
+import { gsap, Power4 } from 'gsap'
 import { ScrollTrigger } from '../animate/ScrollTrigger'
 
 
@@ -68,8 +68,36 @@ const Nutri = () => {
         },
     ]
 
+    // Animations
+    useEffect(() => {
+        const titleNutri = document.querySelector('.nutri__title')
+        const nutriPortions = document.querySelector('.nutri__portions')
+        const nutriIngredientes = document.querySelector('.nutri__ingredientes')
+        const tableGroup = document.querySelectorAll('.table__group')
 
-    const titleNutri = document.querySelector('.nutri__title')
+        const timeLineNutri = gsap.timeline({
+            scrollTrigger: {
+                pin: true,
+                trigger: '.hero__flavors',
+                // markers: true,
+                start: 'top top',
+                end: '1% 1%',
+                duration: 1
+            },
+            defaults: {
+                opacity: 0,
+                ease: Power4.easeOut,
+                stagger: 0.05
+            },
+        });
+
+
+        timeLineNutri.from(titleNutri, { x: -500 })
+            .from(nutriPortions, { x: -500 })
+            .from(nutriIngredientes, { x: -500 })
+            .from(tableGroup, { x: -200 });
+    }, [])
+
 
     var i = 1;
     return (
