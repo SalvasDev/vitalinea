@@ -8,7 +8,29 @@ import { ScrollTrigger } from '../animate/ScrollTrigger'
 
 const Nutri = () => {
 
+    //Register de plugin for animation scroll
     gsap.registerPlugin(ScrollTrigger);
+
+    /// Get viewport with for movil animation
+    function getViewPortWidth() {
+        var viewportwidth;
+        // the more standards compliant browsers (mozilla/netscape/opera/IE7) use window.innerWidth and window.innerHeight
+        if (typeof window.innerWidth != 'undefined') {
+            viewportwidth = window.innerWidth;
+            // IE6 in standards compliant mode (i.e. with a valid doctype as the first line in the document)
+        } else if (typeof document.documentElement != 'undefined' && typeof document.documentElement.clientWidth != 'undefined' && document.documentElement.clientWidth != 0) {
+            viewportwidth = document.documentElement.clientWidth;
+            // older versions of IE
+        } else {
+            viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
+        }
+        console.log(viewportwidth)
+        return viewportwidth;
+    }
+
+
+
+
 
 
     const nutriArr = [
@@ -70,6 +92,9 @@ const Nutri = () => {
 
     // Animations
     useEffect(() => {
+
+
+
         const titleNutri = document.querySelector('.nutri__title')
         const nutriPortions = document.querySelector('.nutri__portions')
         const nutriIngredientes = document.querySelector('.nutri__ingredientes')
@@ -78,8 +103,8 @@ const Nutri = () => {
         const timeLineNutri = gsap.timeline({
             scrollTrigger: {
                 pin: true,
-                trigger: '.hero__flavors',
-                // markers: true,
+                trigger: getViewPortWidth() < 768 ? '.header__bar' : '.hero__flavors',
+                markers: true,
                 start: 'top top',
                 end: '1% 1%',
                 duration: 1
