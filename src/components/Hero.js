@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react'
 import bottle__top from '../img/products/img-bote-fresa.png'
-import { gsap, Bounce } from 'gsap'
-
-// import bottle__top2x from '../img/products/img-bote-fresa@2x.png'
-// import bottle__top3x from '../img/products/img-bote-fresa@3x.png'
+import { gsap, Power4 } from 'gsap'
 
 import sello__avalado from '../img/logos/img-sello-avalado.png'
 import sello__avalado2x from '../img/logos/img-sello-avalado@2x.png'
@@ -28,7 +25,7 @@ const Hero = () => {
         const Bottle = document.querySelectorAll('.hero__bottle');
         const Arrow = document.querySelector('.arrow__oval');
 
-        timeline.from(Bottle, { opacity: 0, ease: Bounce.easeOut, x: -500, stagger: 0.1 }).from(Arrow, { opacity: 0, ease: Bounce.easeOut, y: -10, repeat: 1, stagger: 0.1 });
+        timeline.from(Bottle, { opacity: 0, ease: Power4.easeOut, x: -3000, duration: .5, stagger: 0.1 }).from(Arrow, { opacity: 0, ease: Power4.easeOut, y: -10, repeat: 1, stagger: 0.1 });
     }, []);
 
 
@@ -36,6 +33,7 @@ const Hero = () => {
 
     return (
         <section className="hero__section">
+
             <img className="fresa__arriba" src={fresa__top} alt="fresa arriba" />
             <img className="fresahero__izq" src={fresahero__izq} alt="fresa arriba" />
             <div className="hero__bottle"></div>
@@ -68,10 +66,13 @@ const Hero = () => {
                     </div>
                 </div> {/* End hero info */}
             </div>
+
             {/* Arrow */}
             <button className="arrow__oval">
                 <img src={flecha} className="flecha" alt="arrow" />
             </button>
+                
+
         </section>
 
     )

@@ -1,12 +1,16 @@
 .nutri__container {
     width: 100%;
     margin: (8.8rem auto 0 auto);
+    overflow: hidden;
 
     @include desk__1024 {
         display: flex;
         flex-direction: column;
     }
 
+    @include mob__375 {
+        overflow: hidden;
+    }
 
 }
 
@@ -120,41 +124,10 @@
 
 .fresanutri__der {
     position: absolute;
-    display: block;
     margin-top: -5rem;
-    margin-left: 70vw;
+    right: 0;
     z-index: 100;
-
-    @include mob__490 {
-        margin-left: 80vw;
-    }
-
-    @include tablet__768 {
-        margin-left: 90vw;
-    }
-
-    @include desk__1024 {
-        margin-left: 90vw;
-
-    }
-
-    @include desk__1200 {
-        margin-left: 90vw;
-
-    }
-
-    @include desk__1440 {
-        margin-left: 90vw;
-
-    }
-
-    @include desk__1920 {
-        margin-left: 92vw;
-
-    }
 }
-
-
 
 .fresanutri__izq {
     position: absolute;

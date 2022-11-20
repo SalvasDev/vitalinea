@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react'
 import fresanutri__der from '../img/strawberries/img-fresas-6.png'
 import fresanutri__izq from '../img/strawberries/img-fresas-7.png'
 import fnutrigde__izq from '../img/strawberries/img-fresas-4.png'
+import { nutriArr } from '../utilies/constant'
 import { gsap, Power4 } from 'gsap'
 import { ScrollTrigger } from '../animate/ScrollTrigger'
 
@@ -24,77 +25,13 @@ const Nutri = () => {
         } else {
             viewportwidth = document.getElementsByTagName('body')[0].clientWidth;
         }
-        console.log(viewportwidth)
         return viewportwidth;
     }
 
 
 
-
-
-
-    const nutriArr = [
-        {
-            contenido: 'Contenido energético kJ/ kcal',
-            cantidad: '413,2/97,9'
-        },
-
-        {
-            contenido: 'Proteínas (g)',
-            cantidad: '5,3'
-        },
-
-        {
-            contenido: 'Grasas (lípidos) (g)',
-            cantidad: '2.1'
-        },
-
-        {
-            contenido: 'Grasas saturadas (g)',
-            cantidad: '1.4'
-        },
-
-        {
-            contenido: 'Carbohidratos (Hidratos de carbono) (g)',
-            cantidad: '12.4'
-        },
-
-        {
-            contenido: 'Azúcares (g)',
-            cantidad: '7.7'
-        },
-
-        {
-            contenido: 'Azúcares añadidos (g)',
-            cantidad: '0.1'
-        },
-
-        {
-            contenido: 'Fibra dietética (g)',
-            cantidad: '0.0'
-        },
-
-        {
-            contenido: 'Sodio (mg)',
-            cantidad: '92.7'
-        },
-
-        {
-            contenido: 'Calcio(mg)',
-            cantidad: '199.6'
-        },
-
-        {
-            contenido: '% VNR *',
-            cantidad: '22'
-        },
-    ]
-
     // Animations
     useEffect(() => {
-
-
-
         const titleNutri = document.querySelector('.nutri__title')
         const nutriPortions = document.querySelector('.nutri__portions')
         const nutriIngredientes = document.querySelector('.nutri__ingredientes')

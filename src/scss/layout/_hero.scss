@@ -1,39 +1,71 @@
 .hero__section {
     width: 100%;
-    height: 80%;
+    height: 140%;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(10deg, $white__color 10%, #ebacac 10%);
-    padding-bottom: 2rem;
     z-index: 0;
+    overflow: hidden;
+    position: relative;
 
+    @media (min-width: 350px) {
+            padding-bottom: 0;
+        } 
 
+    @media (min-width: 900px) {
+        padding-bottom: 1rem;
+    }
+
+    @media (min-width: 1017px) {
+        padding-bottom: 0;
+    }
+
+    @include desk__1024 {
+        padding-bottom: 3rem;
+    }
+
+    @include desk__1200 {
+        padding-bottom: 4rem;
+    }
 
     @include desk__1440 {
-        background-image: linear-gradient(10deg, $white__color 7%, #ebacac 7%);
+       padding-bottom: 5rem;
     }
 
     @include desk__1920 {
-        background-image: linear-gradient(5deg, $white__color 5%, #ebacac 5%);
+        padding-bottom: 6rem;
     }
 
-    ////////////////////////
 
-    @include desk__1024 {
-        align-items: start;
-    }
 
+&::after {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: linear-gradient(to bottom, #f9e6e6, #ebacac);
+        box-shadow: 0 5px 10px 15 rgba(0, 0, 0, 0.09);
+        transform-origin: top right;
+        transform: skewY(5deg);
+        z-index: 1;
+
+    }    
 
 }
+
 
 .hero__container {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     z-index: 2;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+
 
     @include tablet__768 {
         height: 68%;
+        overflow: hidden;
     }
 
 
@@ -54,6 +86,8 @@
         @include desk__1024 {
             height: 40rem;
         }
+
+
     }
 
     .hero__info {
@@ -192,6 +226,10 @@
     margin-left: 17rem;
     z-index: 2;
 
+    @include mob__375 {
+        margin-left: 0;
+    }
+
     @include tablet__768 {
         margin-left: 45rem;
     }
@@ -222,44 +260,3 @@
 
 
 
-// &::after {
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     content: '';
-//     background-image: linear-gradient(to bottom, #f9e6e6, #ebacac);
-//     box-shadow: 0 14px 44px 0 rgba(0, 0, 0, 0.09);
-//     transform-origin: top right;
-//     transform: skewY(15deg);
-//     z-index: 1;
-
-//     @include mob__490 {
-//         min-height: 80vh;
-
-//     }
-
-//     @include tablet__768 {
-//         min-height: 87vh;
-
-//     }
-
-//     @include desk__1024 {
-//         transform: skewY(8deg);
-//         height: 70vh;
-//     }
-
-//     @include desk__1200 {
-//         transform: skewY(8deg);
-//         height: 72vh;
-//     }
-
-//     @include desk__1440 {
-//         transform: skewY(5deg);
-//         height: 96vh;
-//     }
-
-//     @include desk__1920 {
-//         transform: skewY(3deg);
-//         height: 30%;
-//     }
-// }

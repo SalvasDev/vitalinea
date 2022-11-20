@@ -3,6 +3,7 @@
     height: 17rem;
     padding-top: 3.3rem;
     text-align: center;
+    overflow: hidden;
 
     @include desk__1440 {
         height: 11.6rem;

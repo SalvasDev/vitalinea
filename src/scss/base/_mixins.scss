@@ -34,3 +34,12 @@
         @content;
     }
 }
+
+@mixin mob__375 {
+    @media(min-width: 375px) {
+        @content;
+    }
+
+
+
+}

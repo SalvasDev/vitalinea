@@ -55,9 +55,10 @@ const Header = () => {
                     </button>
 
                 </header>
-                <Hero />
 
             </section>
+                        <Hero />
+
 
         </Fragment>
 
